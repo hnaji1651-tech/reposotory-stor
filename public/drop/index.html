@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>نظارات Lenstrail POV — صوّر مغامراتك بدون يدين | الدفع عند الاستلام</title>
+<meta name="description" content="نظارات Lenstrail POV بالكاميرا المدمجة HD: تصوير بدون يدين، خفيفة ومقاومة للماء، بطارية تدوم طويلاً. التوصيل لجميع المدن المغربية والدفع عند الاستلام." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Cairo', ui-sans-serif, system-ui, sans-serif; background: #faf8f2; color: #1a2b23; -webkit-font-smoothing: antialiased; }
+  section { scroll-margin-top: 90px; }
+  ::selection { background: #f97316; color: #fff; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(50%); } }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @keyframes heroZoom { from { transform: scale(1.12); } to { transform: scale(1); } }
+  .animate-marquee { animation: marquee 28s linear infinite; }
+  .animate-fadeUp { animation: fadeUp .7s ease both; }
+  .animate-floaty { animation: floaty 5s ease-in-out infinite; }
+  .animate-heroZoom { animation: heroZoom 2.4s ease-out both; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1); }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #f1ead9; }
+  ::-webkit-scrollbar-thumb { background: #1a2b23; border-radius: 99px; }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- ===== الشريط العلوي ===== -->
+<div class="bg-[#1a2b23] text-[#f3ede1] text-center text-[11px] sm:text-xs font-bold py-2.5 px-4">
+  التوصيل لجميع المدن المغربية &nbsp;·&nbsp; الدفع عند الاستلام &nbsp;·&nbsp; تخفيض 38% اليوم فقط
+</div>
+
+<!-- ===== الهيدر ===== -->
+<header class="sticky top-0 z-40 bg-[#faf8f2]/90 backdrop-blur-xl border-b border-[#1a2b23]/10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 sm:h-[72px] items-center justify-between gap-4">
+      <button id="menuBtn" class="lg:hidden p-2 -mr-2 rounded-full hover:bg-black/5" aria-label="القائمة">
+        <svg id="menuIcoOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        <svg id="menuIcoClose" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <a href="#top" class="flex items-center gap-2.5">
+        <span class="grid place-items-center size-9 sm:size-10 rounded-full bg-[#f97316] text-white">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4a2 2 0 0 1 1.76 1.05l.49.9A2 2 0 0 0 18 7h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h2a2 2 0 0 0 1.76-1.05l.49-.9A2 2 0 0 1 10 4z"/><circle cx="12" cy="13" r="3"/></svg>
+        </span>
+        <span class="leading-none">
+          <span class="block text-xl sm:text-2xl font-black tracking-wide">LENSTRAIL</span>
+          <span class="block text-[10px] font-bold text-[#1a2b23]/60">نظارات POV بالكاميرا</span>
+        </span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-bold text-[#1a2b23]/65">
+        <a class="hover:text-[#1a2b23]" href="#features">المميزات</a>
+        <a class="hover:text-[#1a2b23]" href="#gallery">الصور</a>
+        <a class="hover:text-[#1a2b23]" href="#reviews">آراء الزبناء</a>
+        <a class="hover:text-[#1a2b23]" href="#faq">أسئلة شائعة</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-5 sm:px-7 py-2.5 text-sm font-black hover:bg-[#1eb856] transition-all shadow-[0_8px_25px_rgba(37,211,102,0.45)]">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          اطلب الآن
+        </a>
+      </div>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="hidden lg:hidden border-t border-black/10 bg-[#faf8f2] px-4 py-3">
+    <a class="block py-3 text-sm font-bold text-[#1a2b23]/80 border-b border-black/5" href="#features">المميزات</a>
+    <a class="block py-3 text-sm font-bold text-[#1a2b23]/80 border-b border-black/5" href="#gallery">الصور</a>
+    <a class="block py-3 text-sm font-bold text-[#1a2b23]/80 border-b border-black/5" href="#reviews">آراء الزبناء</a>
+    <a class="block py-3 text-sm font-bold text-[#1a2b23]/80" href="#faq">أسئلة شائعة</a>
+    <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="mt-2 flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-white py-3 text-sm font-black">اطلب الآن واتساب — الدفع عند الاستلام</a>
+  </nav>
+</header>
+
+<div class="flex-1" id="top">
+<!-- ===== البطل Hero ===== -->
+<section class="relative overflow-hidden bg-[#101d17] text-white">
+  <div class="absolute inset-0 opacity-25">
+    <img src="https://images.pexels.com/photos/10939877/pexels-photo-10939877.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="" class="h-full w-full object-cover animate-heroZoom" />
+    <div class="absolute inset-0 bg-gradient-to-b from-[#101d17] via-[#101d17]/60 to-[#101d17]"></div>
+  </div>
+  <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-12 sm:pt-16 sm:pb-16 grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="inline-flex flex-wrap items-center gap-2 rounded-full bg-[#f97316] px-4 py-1.5 text-xs font-black animate-fadeUp">
+        تخفيض 38% — العرض كيسالي اليوم <span dir="ltr" class="font-mono font-black tabular-nums" data-countdown>--:--:--</span>
+      </p>
+      <h1 class="mt-4 text-[clamp(2rem,6vw,3.8rem)] leading-[1.35] font-black animate-fadeUp" style="animation-delay:80ms">
+        صوّر مغامراتك بدون يدين مع نظارات <span class="text-[#fb923c]">Lenstrail POV</span>
+      </h1>
+      <p class="mt-4 text-white/80 text-[15px] sm:text-lg leading-relaxed max-w-xl animate-fadeUp" style="animation-delay:160ms">
+        كاميرا HD مدمجة كتصوّر من منظور عينيك — للموتور، الدراجة، السفر والبحر.
+        خفيفة، ضد الماء، وبطارية صبّارة. خلّص غير ملي توصلك السلعة.
+      </p>
+      <div class="mt-5 flex items-center gap-2 text-sm font-bold animate-fadeUp" style="animation-delay:220ms">
+        <span class="text-[#fb923c] tracking-tight">★★★★★</span>
+        <span><strong>4.8/5</strong> · +300 زبون راضي</span>
+      </div>
+      <div class="mt-4 animate-fadeUp" style="animation-delay:260ms">
+        <span class="text-3xl font-black">499 د.م.</span>
+        <span class="mr-2 text-xl line-through text-white/40">799 د.م.</span>
+        <p class="text-xs text-white/60 mt-1">التوصيل مجاني · الدفع عند الاستلام</p>
+      </div>
+      <div class="mt-6 flex flex-wrap gap-3 animate-fadeUp" style="animation-delay:320ms">
+        <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-4 text-base font-black hover:bg-[#1eb856] transition-all shadow-[0_12px_40px_rgba(37,211,102,0.5)]">
+          اطلب الآن واتساب — خلّص ملي توصلك
+        </a>
+        <a href="#features" class="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-8 py-4 text-base font-bold hover:bg-white/20 transition-colors">شوف كيفاش خدامة</a>
+      </div>
+      <div class="mt-7 grid grid-cols-3 gap-2 max-w-md text-center">
+        <div class="rounded-2xl bg-white/10 border border-white/15 px-2 py-3"><p class="text-xl">💵</p><p class="mt-1.5 text-[12px] font-black leading-tight">الدفع عند الاستلام</p></div>
+        <div class="rounded-2xl bg-white/10 border border-white/15 px-2 py-3"><p class="text-xl">🚚</p><p class="mt-1.5 text-[12px] font-black leading-tight">توصيل لجميع المدن</p></div>
+        <div class="rounded-2xl bg-white/10 border border-white/15 px-2 py-3"><p class="text-xl">🛡️</p><p class="mt-1.5 text-[12px] font-black leading-tight">ضمان سنة كاملة</p></div>
+      </div>
+    </div>
+    <div class="relative animate-fadeUp" style="animation-delay:200ms">
+      <div class="relative overflow-hidden rounded-[28px] bg-white shadow-2xl rotate-1">
+        <img src="https://s.alicdn.com/@sc04/kf/H589838e0af01404a967af15854ffa9505.jpg?avif=close&webp=close" alt="نظارات Lenstrail POV بالكاميرا المدمجة" class="w-full aspect-square object-cover" />
+        <span class="absolute top-4 right-4 rounded-full bg-[#dc2626] text-white px-4 py-1.5 text-sm font-black shadow-lg">-38%</span>
+        <span class="absolute top-4 left-4 rounded-full bg-[#1a2b23] text-white px-4 py-1.5 text-xs font-black">الأكثر مبيعاً</span>
+      </div>
+      <div class="absolute -bottom-4 right-6 left-6 sm:right-10 sm:left-10">
+        <div class="rounded-2xl bg-[#1a2b23]/95 px-5 py-3.5 flex items-center justify-between shadow-xl">
+          <div>
+            <p class="text-sm font-black">Lenstrail POV — برتقالي ناري</p>
+            <p class="text-xs text-white/60">كاميرا HD · ضد الماء · بطارية 6 ساعات</p>
+          </div>
+          <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-black hover:bg-[#1eb856] transition-colors whitespace-nowrap">499 د.م.</a>
+        </div>
+      </div>
+      <div class="absolute -top-3 left-6 rounded-2xl bg-white text-[#1a2b23] px-4 py-2 text-xs font-black shadow-xl animate-floaty">
+        <span class="inline-flex items-center gap-1.5"><span class="size-2 rounded-full bg-red-500 animate-pulse"></span> كاميرا HD مدمجة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== شريط متحرك ===== -->
+<div class="overflow-hidden border-b border-[#1a2b23]/10 bg-[#fff3e6] py-3" dir="ltr">
+  <div class="flex w-max animate-marquee gap-10 text-[12px] font-black text-[#7c2d12]/80" dir="rtl">
+    <div class="flex gap-10 pl-10">
+      <span class="whitespace-nowrap">✦ الدفع عند الاستلام</span><span class="whitespace-nowrap">✦ توصيل 24-72 ساعة لجميع المدن</span><span class="whitespace-nowrap">✦ كاميرا HD من منظور عينيك</span><span class="whitespace-nowrap">✦ ضد الماء والعرق IPX5</span><span class="whitespace-nowrap">✦ بطارية حتى 6 ساعات</span><span class="whitespace-nowrap">✦ إرجاع خلال 7 أيام</span>
+    </div>
+    <div class="flex gap-10 pl-10" aria-hidden="true">
+      <span class="whitespace-nowrap">✦ الدفع عند الاستلام</span><span class="whitespace-nowrap">✦ توصيل 24-72 ساعة لجميع المدن</span><span class="whitespace-nowrap">✦ كاميرا HD من منظور عينيك</span><span class="whitespace-nowrap">✦ ضد الماء والعرق IPX5</span><span class="whitespace-nowrap">✦ بطارية حتى 6 ساعات</span><span class="whitespace-nowrap">✦ إرجاع خلال 7 أيام</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== المميزات ===== -->
+<section id="features" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
+  <div class="reveal">
+    <p class="text-center text-xs font-black text-[#ea580c]">علاش Lenstrail POV؟</p>
+    <h2 class="mt-2 text-center text-3xl sm:text-5xl font-black tracking-tight">3 أسباب كيخليوها الأفضل</h2>
+  </div>
+  <div class="mt-8 grid gap-4 md:grid-cols-3">
+    <article class="reveal h-full overflow-hidden rounded-[24px] bg-white border border-black/[0.07] shadow-[0_4px_25px_rgba(26,43,35,0.08)]">
+      <div class="relative aspect-[4/3] overflow-hidden bg-[#ece5d3]">
+        <img src="https://s.alicdn.com/@sc04/kf/H589838e0af01404a967af15854ffa9505.jpg?avif=close&webp=close" alt="كاميرا HD مدمجة" loading="lazy" class="h-full w-full object-cover" />
+        <span class="absolute bottom-3 right-3 grid place-items-center size-11 rounded-full bg-[#f97316] text-white shadow-lg text-xl">📷</span>
+      </div>
+      <div class="p-6">
+        <h3 class="text-2xl font-black">كاميرا HD مدمجة</h3>
+        <p class="mt-2 text-sm leading-relaxed text-black/65">عدسة مخفية في الوسط كتصوّر فيديو وصور من نفس منظور عينيك. ضغطة وحدة على الزر وكتولي مخرج — بلا هاتف فيدك، بلا كاميرا فوق الراس.</p>
+        <ul class="mt-4 space-y-2 text-sm font-bold">
+          <li>✓ تصوير POV بزاوية واسعة</li><li>✓ فيديو + صور بزر واحد</li><li>✓ مثالية للموتور والدراجة والسفر</li>
+        </ul>
+      </div>
+    </article>
+    <article class="reveal h-full overflow-hidden rounded-[24px] bg-white border border-black/[0.07] shadow-[0_4px_25px_rgba(26,43,35,0.08)]" style="transition-delay:90ms">
+      <div class="relative aspect-[4/3] overflow-hidden bg-[#ece5d3]">
+        <img src="https://images.pexels.com/photos/5807795/pexels-photo-5807795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="خفيفة ومقاومة للماء" loading="lazy" class="h-full w-full object-cover" />
+        <span class="absolute bottom-3 right-3 grid place-items-center size-11 rounded-full bg-[#f97316] text-white shadow-lg text-xl">💧</span>
+      </div>
+      <div class="p-6">
+        <h3 class="text-2xl font-black">خفيفة ومقاومة للماء</h3>
+        <p class="mt-2 text-sm leading-relaxed text-black/65">غير 32 غرام — غادي تنسى بلي لابسها. مقاومة للماء والعرق والغبار، ثابتة فوق الموتور وفي الجري، وعدسات مستقطبة كتحمي عينيك من الشمس.</p>
+        <ul class="mt-4 space-y-2 text-sm font-bold">
+          <li>✓ وزن خفيف 32غ فقط</li><li>✓ مقاومة للماء IPX5</li><li>✓ عدسات UV400 مستقطبة</li>
+        </ul>
+      </div>
+    </article>
+    <article class="reveal h-full overflow-hidden rounded-[24px] bg-white border border-black/[0.07] shadow-[0_4px_25px_rgba(26,43,35,0.08)]" style="transition-delay:180ms">
+      <div class="relative aspect-[4/3] overflow-hidden bg-[#ece5d3]">
+        <img src="https://images.pexels.com/photos/10939877/pexels-photo-10939877.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="بطارية تدوم طويلاً" loading="lazy" class="h-full w-full object-cover" />
+        <span class="absolute bottom-3 right-3 grid place-items-center size-11 rounded-full bg-[#f97316] text-white shadow-lg text-xl">🔋</span>
+      </div>
+      <div class="p-6">
+        <h3 class="text-2xl font-black">بطارية تدوم طويلاً</h3>
+        <p class="mt-2 text-sm leading-relaxed text-black/65">حتى 6 ساعات تصوير متواصل في الشحنة الوحدة — كافية لنهار كامل ديال المغامرات. شحن سريع USB-C وكارت ميموري 32GB هدية في العلبة.</p>
+        <ul class="mt-4 space-y-2 text-sm font-bold">
+          <li>✓ حتى 6 ساعات تصوير</li><li>✓ شحن سريع USB-C</li><li>✓ كارت 32GB هدية + دعم حتى 128GB</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== الصور ===== -->
+<section id="gallery" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
+  <div class="reveal">
+    <p class="text-center text-xs font-black text-[#ea580c]">شوفها من قريب</p>
+    <h2 class="mt-2 text-center text-3xl sm:text-4xl font-black">صور المنتج الحقيقية</h2>
+  </div>
+  <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <figure class="reveal overflow-hidden rounded-[20px] bg-white border border-black/[0.07]">
+      <div class="aspect-square overflow-hidden bg-[#ece5d3]"><img src="https://s.alicdn.com/@sc04/kf/H589838e0af01404a967af15854ffa9505.jpg?avif=close&webp=close" alt="الواجهة — الكاميرا في الوسط" loading="lazy" class="h-full w-full object-cover" /></div>
+      <figcaption class="px-4 py-3 text-[13px] font-bold text-center">الواجهة — الكاميرا في الوسط</figcaption>
+    </figure>
+    <figure class="reveal overflow-hidden rounded-[20px] bg-white border border-black/[0.07]" style="transition-delay:70ms">
+      <div class="aspect-square overflow-hidden bg-[#ece5d3]"><img src="https://images.pexels.com/photos/5807795/pexels-photo-5807795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="ثابتة في الحركة والرياضة" loading="lazy" class="h-full w-full object-cover" /></div>
+      <figcaption class="px-4 py-3 text-[13px] font-bold text-center">ثابتة في الحركة والرياضة</figcaption>
+    </figure>
+    <figure class="reveal overflow-hidden rounded-[20px] bg-white border border-black/[0.07]" style="transition-delay:140ms">
+      <div class="aspect-square overflow-hidden bg-[#ece5d3]"><img src="https://images.pexels.com/photos/10939877/pexels-photo-10939877.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="رفيقة المغامرات الطويلة" loading="lazy" class="h-full w-full object-cover" /></div>
+      <figcaption class="px-4 py-3 text-[13px] font-bold text-center">رفيقة المغامرات الطويلة</figcaption>
+    </figure>
+    <figure class="reveal overflow-hidden rounded-[20px] bg-white border border-black/[0.07]" style="transition-delay:210ms">
+      <div class="aspect-square overflow-hidden bg-[#ece5d3]"><img src="https://s.alicdn.com/@sc04/kf/H045731cb263b403eb04e90e5be01af8d7.jpg?avif=close&webp=close" alt="الأبعاد ومحتوى العلبة" loading="lazy" class="h-full w-full object-cover" /></div>
+      <figcaption class="px-4 py-3 text-[13px] font-bold text-center">الأبعاد ومحتوى العلبة</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== كيفاش + المواصفات ===== -->
+<section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
+  <div class="grid gap-4 lg:grid-cols-2">
+    <div class="reveal h-full rounded-[26px] bg-[#1a2b23] text-white p-7 sm:p-10">
+      <p class="text-xs font-black text-[#fdba74]">ساهلة بزاف</p>
+      <h2 class="mt-2 text-3xl font-black">كيفاش كتخدم؟ 3 خطوات</h2>
+      <div class="mt-6 space-y-4">
+        <div class="flex gap-4 rounded-2xl bg-white/[0.07] border border-white/10 p-4"><span class="grid place-items-center size-10 shrink-0 rounded-full bg-[#f97316] font-black text-lg">1</span><div><p class="font-black">لبس النظارات</p><p class="mt-0.5 text-sm text-white/65">إطار رياضي مريح وثابت — كتلبسها بحال أي نظارات شمسية عادية.</p></div></div>
+        <div class="flex gap-4 rounded-2xl bg-white/[0.07] border border-white/10 p-4"><span class="grid place-items-center size-10 shrink-0 rounded-full bg-[#f97316] font-black text-lg">2</span><div><p class="font-black">ضغط على الزر</p><p class="mt-0.5 text-sm text-white/65">ضغطة وحدة للتصويرة، وضغطة مطوّلة للفيديو. ضوء صغير كيأكد بلي كتصوّر.</p></div></div>
+        <div class="flex gap-4 rounded-2xl bg-white/[0.07] border border-white/10 p-4"><span class="grid place-items-center size-10 shrink-0 rounded-full bg-[#f97316] font-black text-lg">3</span><div><p class="font-black">تفرّج وبارطاجي</p><p class="mt-0.5 text-sm text-white/65">نقل الملفات للهاتف بالكابل، ومونتاج سريع وبارطاجي مغامراتك.</p></div></div>
+      </div>
+    </div>
+    <div class="reveal h-full rounded-[26px] bg-white border border-black/[0.08] p-7 sm:p-10" style="transition-delay:100ms">
+      <p class="text-xs font-black text-[#ea580c]">المواصفات التقنية</p>
+      <h2 class="mt-2 text-3xl font-black">شنو فيها بالضبط؟</h2>
+      <dl class="mt-6 divide-y divide-black/[0.07] text-sm">
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">الكاميرا</dt><dd class="text-black/60">HD مدمجة، تصوير POV بزاوية واسعة</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">العدسات</dt><dd class="text-black/60">مستقطبة UV400 ضد الشمس والانعكاس</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">الوزن</dt><dd class="text-black/60">32 غرام فقط — خفيفة بزاف</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">المقاومة</dt><dd class="text-black/60">ضد الماء والعرق والغبار IPX5</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">البطارية</dt><dd class="text-black/60">حتى 6 ساعات تصوير + شحن USB-C سريع</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">التخزين</dt><dd class="text-black/60">كارت 32GB هدية، دعم حتى 128GB</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">الألوان</dt><dd class="text-black/60">برتقالي ناري / أسود</dd></div>
+        <div class="flex justify-between gap-4 py-3"><dt class="font-black shrink-0">محتوى العلبة</dt><dd class="text-black/60">النظارات + علبة صلبة + كابل + منديل</dd></div>
+      </dl>
+      <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="mt-6 flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-white py-3.5 text-sm font-black hover:bg-[#1eb856] transition-colors">بغيتها واتساب — 499 د.م. فقط</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== الآراء ===== -->
+<section id="reviews" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-20">
+  <div class="reveal rounded-[28px] border border-[#1a2b23]/10 bg-white p-6 sm:p-10">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <div>
+        <p class="text-xs font-black text-[#ea580c]">آراء حقيقية</p>
+        <h2 class="mt-2 text-3xl sm:text-4xl font-black">شنو قالو الزبناء؟</h2>
+      </div>
+      <div class="flex items-center gap-3 rounded-2xl bg-[#faf8f2] border border-black/[0.07] px-5 py-3">
+        <span class="text-4xl font-black">4.8</span>
+        <div><p class="text-[#f97316] tracking-tight">★★★★★</p><p class="text-xs text-black/55 mt-0.5">+327 تقييم من جميع المدن</p></div>
+      </div>
+    </div>
+    <div id="reviewsGrid" class="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- ===== الأسئلة ===== -->
+<section id="faq" class="mx-auto max-w-3xl px-4 sm:px-6 pt-14 sm:pt-20">
+  <div class="reveal">
+    <p class="text-center text-xs font-black text-[#ea580c]">عندك سؤال؟</p>
+    <h2 class="mt-2 text-center text-3xl sm:text-4xl font-black">أسئلة كتوصلنا بزاف</h2>
+    <div id="faqList" class="mt-6 space-y-2.5"></div>
+  </div>
+</section>
+
+<!-- ===== الطلب ===== -->
+<section id="order" class="mx-auto max-w-6xl px-4 sm:px-6 pt-14 sm:pt-20">
+  <div class="reveal">
+    <p class="text-center text-xs font-black text-[#ea580c]">العرض كيسالي اليوم — المخزون محدود</p>
+    <h2 class="mt-2 text-center text-3xl sm:text-5xl font-black">طلب Lenstrail POV دابا</h2>
+    <p class="mt-2 text-center text-black/60 font-bold">بقات غير <span class="text-[#dc2626] font-black">58 قطعة</span> بهاد الثمن — <span dir="ltr" class="font-mono font-black tabular-nums" data-countdown>--:--:--</span></p>
+  </div>
+  <div class="mt-8 grid gap-5 lg:grid-cols-[1fr_1.1fr]">
+    <div class="space-y-4">
+      <div class="reveal overflow-hidden rounded-[24px] bg-white border border-black/[0.07]">
+        <img src="https://s.alicdn.com/@sc04/kf/H589838e0af01404a967af15854ffa9505.jpg?avif=close&webp=close" alt="نظارات Lenstrail POV" class="w-full aspect-square object-cover" />
+      </div>
+      <div class="reveal rounded-[24px] bg-[#1a2b23] text-white p-6">
+        <p class="font-black">📦 شنو غادي يوصلك؟</p>
+        <ul class="mt-3 space-y-2 text-sm text-white/80">
+          <li>✓ نظارات Lenstrail POV بالكاميرا</li><li>✓ كارت ميموري 32GB هدية</li><li>✓ علبة صلبة للحماية</li><li>✓ كابل شحن USB-C سريع</li><li>✓ منديل تنظيف + دليل سريع بالعربية</li>
+        </ul>
+        <div class="mt-4 grid grid-cols-3 gap-2 text-center text-[12px] font-black">
+          <span class="rounded-xl bg-white/10 px-2 py-2.5">توصيل مجاني</span>
+          <span class="rounded-xl bg-white/10 px-2 py-2.5">الدفع عند الاستلام</span>
+          <span class="rounded-xl bg-white/10 px-2 py-2.5">ضمان سنة</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form id="orderForm" class="rounded-[26px] border-2 border-[#1a2b23]/10 bg-white p-5 sm:p-8 shadow-[0_20px_60px_rgba(26,43,35,0.12)]" novalidate>
+        <h3 class="text-2xl font-black">عمّر الاستمارة وطلب دابا</h3>
+        <p class="mt-1 flex items-center gap-1.5 text-sm font-bold text-[#15803d]">💵 الدفع نقداً ملي توصلك السلعة — بلا كارت بنكية</p>
+        <div class="mt-5 space-y-2.5" id="offerBox">
+          <button type="button" data-offer="0" class="offer-btn w-full flex items-center gap-3 rounded-2xl border-2 p-4 text-right transition-all border-black/10">
+            <span class="dot grid place-items-center size-6 rounded-full border-2 shrink-0 border-black/25 text-transparent">✓</span>
+            <span class="flex-1"><span class="block text-sm font-black">نظارة وحدة — عرض التجربة</span></span>
+            <span><span class="block text-lg font-black text-[#f97316]">499 د.م.</span><span class="block text-xs line-through text-black/40">799 د.م.</span></span>
+          </button>
+          <button type="button" data-offer="1" class="offer-btn w-full flex items-center gap-3 rounded-2xl border-2 p-4 text-right transition-all border-[#f97316] bg-[#fff7ed]">
+            <span class="dot grid place-items-center size-6 rounded-full border-2 shrink-0 border-[#f97316] bg-[#f97316] text-white">✓</span>
+            <span class="flex-1"><span class="block text-sm font-black">جوج نظارات — الأكثر طلباً</span><span class="mt-0.5 inline-block rounded-full bg-[#15803d]/10 text-[#15803d] px-2.5 py-0.5 text-xs font-black">وفّر 99 د.م. + توصيل مجاني</span></span>
+            <span><span class="block text-lg font-black text-[#f97316]">899 د.م.</span><span class="block text-xs line-through text-black/40">1,598 د.م.</span></span>
+          </button>
+        </div>
+        <div class="mt-5 grid gap-3">
+          <label class="block"><span class="text-[13px] font-black">الاسم الكامل *</span>
+            <input id="fName" placeholder="مثال: محمد العلوي" class="mt-1.5 w-full rounded-xl border border-black/15 px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]" /></label>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <div><span class="text-[13px] font-black">رقم الهاتف *</span>
+              <input id="fPhone" placeholder="0612345678" inputmode="tel" dir="ltr" class="mt-1.5 w-full rounded-xl border border-black/15 px-4 py-3 text-sm tracking-widest text-left focus:outline-none focus:border-[#f97316]" /></div>
+            <label class="block"><span class="text-[13px] font-black">المدينة *</span>
+              <select id="fCity" class="mt-1.5 w-full rounded-xl border border-black/15 px-4 py-3 text-sm bg-white focus:outline-none focus:border-[#f97316]">
+                <option>الدار البيضاء</option><option>الرباط</option><option>مراكش</option><option>فاس</option><option>مكناس</option><option>أكادير</option><option>طنجة</option><option>تطوان</option><option>وجدة</option><option>القنيطرة</option><option>الجديدة</option><option>الناظور</option><option>بني ملال</option><option>آسفي</option><option>المحمدية</option><option>خريبكة</option><option>برشيد</option><option>الصويرة</option><option>الداخلة</option><option>العيون</option><option>مدينة أخرى</option>
+              </select></label>
+          </div>
+          <label class="block"><span class="text-[13px] font-black">العنوان الكامل *</span>
+            <input id="fAddress" placeholder="الحي، الزنقة، رقم الدار..." class="mt-1.5 w-full rounded-xl border border-black/15 px-4 py-3 text-sm focus:outline-none focus:border-[#f97316]" /></label>
+        </div>
+        <div class="mt-5 rounded-2xl bg-[#faf8f2] border border-black/10 p-4 text-sm space-y-1.5">
+          <div class="flex justify-between"><span class="text-black/60">الثمن</span><strong id="sumPrice">899 د.م.</strong></div>
+          <div class="flex justify-between"><span class="text-black/60">التوصيل</span><strong class="text-[#15803d]">مجاني</strong></div>
+          <div class="flex justify-between border-t border-black/10 pt-2 text-base"><span class="font-black">المجموع عند الاستلام</span><span id="sumTotal" class="font-black text-[#f97316] text-xl">899 د.م.</span></div>
+        </div>
+        <p id="formError" class="hidden mt-3 rounded-xl bg-red-50 border border-red-200 px-4 py-2.5 text-[13px] font-bold text-red-700"></p>
+        <button type="submit" id="submitBtn" class="mt-4 w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] text-white py-4 text-base font-black hover:bg-[#1eb856] transition-all shadow-[0_12px_35px_rgba(37,211,102,0.45)]">
+          تأكيد الطلب عبر واتساب — <span id="submitTotal">899 د.م.</span>
+        </button>
+        <p class="mt-2.5 text-center text-xs text-black/55">غادي يتحل واتساب برسالة فيها طلبك — صيفطها وغادي نتصلو بيك للتأكيد · التوصيل 24-72 ساعة</p>
+      </form>
+      <div id="orderSuccess" class="hidden rounded-[26px] border-2 border-[#15803d]/30 bg-white p-8 text-center">
+        <div class="mx-auto grid place-items-center size-16 rounded-full bg-[#15803d] text-white text-3xl font-black">✓</div>
+        <h3 class="mt-4 text-2xl font-black">تفتح واتساب؟ صيفط الرسالة!</h3>
+        <p class="mt-2 text-sm text-black/60 leading-relaxed">تحلات ليك المحادثة مع الرقم ديالنا وفيها طلبك واجد — غير ضغط <strong>إرسال</strong> في واتساب باش يوصلنا، وغادي نتصلو بيك للتأكيد.</p>
+        <a id="waAgain" href="#" target="_blank" rel="noopener" class="mt-5 inline-flex items-center gap-2 rounded-full bg-[#25D366] text-white px-8 py-3.5 text-sm font-black hover:bg-[#1eb856]">فتح المحادثة مرة أخرى</a>
+        <p class="mt-3 text-xs text-black/50">ما تفتحش؟ <button id="backToForm" class="underline font-bold">رجوع للاستمارة</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-6 grid gap-3 sm:grid-cols-3 text-center">
+    <div class="rounded-2xl bg-white border border-black/[0.07] p-5"><p class="text-2xl">🪶</p><p class="mt-2 font-black">خفيفة ومريحة</p><p class="text-[13px] text-black/55">32غ فقط — للبس اليومي الطويل</p></div>
+    <div class="rounded-2xl bg-white border border-black/[0.07] p-5"><p class="text-2xl">💧</p><p class="mt-2 font-black">ضد الماء والعرق</p><p class="text-[13px] text-black/55">الموتور، البحر، الشتا — بلا خوف</p></div>
+    <div class="rounded-2xl bg-white border border-black/[0.07] p-5"><p class="text-2xl">↩️</p><p class="mt-2 font-black">إرجاع 7 أيام</p><p class="text-[13px] text-black/55">إلا ما عجباتكش، رجّعها</p></div>
+  </div>
+</section>
+</div>
+
+<!-- ===== الفوتر ===== -->
+<footer class="bg-[#1a2b23] text-[#f3ede1] mt-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <p class="text-2xl font-black">📷 LENSTRAIL</p>
+        <p class="mt-4 text-sm leading-relaxed text-[#f3ede1]/70 max-w-xs">نظارات POV بالكاميرا المدمجة — صوّر مغامراتك بدون يدين. التوصيل لجميع المدن المغربية والدفع عند الاستلام.</p>
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[#f3ede1]/70">
+          <span>🚚 توصيل لجميع المدن</span><span>💵 الدفع عند الاستلام</span><span>🛡️ ضمان سنة</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-xs font-black text-[#f3ede1]/50">روابط سريعة</h4>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a class="hover:text-white" href="#features">المميزات</a></li>
+          <li><a class="hover:text-white" href="#gallery">صور المنتج</a></li>
+          <li><a class="hover:text-white" href="#reviews">آراء الزبناء</a></li>
+          <li><a class="hover:text-white" href="#faq">أسئلة شائعة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-black text-[#f3ede1]/50">اطلب مباشرة</h4>
+        <p class="mt-4 text-sm text-[#f3ede1]/70">طلب عبر واتساب وخلّص ملي توصلك السلعة. بلا كارت بنكية، بلا تعقيدات.</p>
+        <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-black hover:bg-[#1eb856]">اطلب عبر واتساب</a>
+        <p class="mt-4 text-[13px] text-[#f3ede1]/60">↩️ إمكانية الإرجاع خلال 7 أيام</p>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-[#f3ede1]/50">
+      <span>© 2026 Lenstrail المغرب — جميع الحقوق محفوظة.</span>
+      <span>الدفع نقداً عند الاستلام · التوصيل 24-72 ساعة</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== شريط الهاتف الثابت ===== -->
+<div class="fixed bottom-0 inset-x-0 z-40 lg:hidden border-t border-black/10 bg-white/95 backdrop-blur px-4 py-3 flex items-center gap-3">
+  <div class="flex-1">
+    <p class="text-[11px] line-through text-black/40">799 د.م.</p>
+    <p class="text-lg font-black text-[#f97316] leading-none">499 د.م.</p>
+  </div>
+  <a data-wa-inquiry href="#" target="_blank" rel="noopener" class="flex-[1.4] text-center rounded-full bg-[#25D366] text-white py-3.5 text-[15px] font-black shadow-[0_8px_25px_rgba(37,211,102,0.45)]">اطلب الآن واتساب</a>
+</div>
+<div class="h-20 lg:hidden"></div>
+
+<!-- ===== زر واتساب العائم ===== -->
+<a href="https://wa.me/c/212698536992" target="_blank" rel="noopener" aria-label="تواصل معانا على واتساب وشوف الكتالوج" title="تواصل معانا واتساب" class="fixed z-50 bottom-24 right-4 lg:bottom-6 lg:right-6 group">
+  <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30"></span>
+  <span class="relative grid place-items-center size-14 rounded-full bg-[#25D366] text-white shadow-[0_10px_30px_rgba(37,211,102,0.5)] transition-transform group-hover:scale-110">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </span>
+  <span class="absolute top-0 right-0 grid place-items-center size-4 rounded-full bg-[#dc2626] text-white text-[10px] font-black">1</span>
+</a>
+
+<script>
+// ===== بيانات المتجر =====
+var WA_NUMBER = "212698536992";
+var PRODUCT = "نظارات Lenstrail POV بالكاميرا";
+var OFFERS = [
+  { qty: 1, price: "499 د.م.", label: "عرض التجربة" },
+  { qty: 2, price: "899 د.م.", label: "عرض الثنائي" }
+];
+function waLink(msg) { return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg); }
+var INQUIRY = "السلام عليكم، بغيت نطلب نظارات Lenstrail POV بالكاميرا 🕶️\nالثمن: 499 د.م. بدل 799 د.م.\n(التوصيل مجاني + الدفع عند الاستلام)\nشكراً!";
+document.querySelectorAll("[data-wa-inquiry]").forEach(function (a) { a.href = waLink(INQUIRY); });
+
+// ===== العد التنازلي =====
+function tick() {
+  var now = new Date(), end = new Date(now); end.setHours(23, 59, 59, 999);
+  var d = Math.max(0, end - now),
+      h = String(Math.floor(d / 3600000)).padStart(2, "0"),
+      m = String(Math.floor((d % 3600000) / 60000)).padStart(2, "0"),
+      s = String(Math.floor((d % 60000) / 1000)).padStart(2, "0");
+  document.querySelectorAll("[data-countdown]").forEach(function (el) { el.textContent = h + ":" + m + ":" + s; });
+}
+tick(); setInterval(tick, 1000);
+
+// ===== القائمة =====
+var menuBtn = document.getElementById("menuBtn"), mobileMenu = document.getElementById("mobileMenu"),
+    io = document.getElementById("menuIcoOpen"), ic = document.getElementById("menuIcoClose");
+menuBtn.addEventListener("click", function () {
+  var open = mobileMenu.classList.toggle("hidden");
+  io.classList.toggle("hidden", !open); ic.classList.toggle("hidden", open);
+});
+mobileMenu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { mobileMenu.classList.add("hidden"); io.classList.remove("hidden"); ic.classList.add("hidden"); }); });
+
+// ===== الظهور عند التمرير =====
+var obs = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); } }); }, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(function (el) { obs.observe(el); });
+
+// ===== الآراء =====
+var REVIEWS = [
+  ["ياسين من الدار البيضاء", 5, "خدماتني فالموتور بزاف", "كنسوق موتور كل نهار وكنت باغي نوثّق الطريق. الكاميرا واضحة والتصوير ثابت، والصوت مسموع. وصلاتني ف 48 ساعة وخلصت ملي وصلاتني. شكراً!"],
+  ["سلمى من الرباط", 5, "خفيفة وزوينة", "كنت خايفة تكون ثقيلة على الوجه ولكن خفيفة بزاف، لبستها نهار كامل فالسفر وما حسيتش بيها. التصاور ديال البحر خرجو واعرين."],
+  ["Mehdi de Casablanca", 5, "Qualité surprenante", "Je ne m'attendais pas à cette qualité pour le prix. Vidéo fluide, lunettes confortables, livraison rapide à Casa en 2 jours."],
+  ["عمر من مراكش", 5, "البطارية صبارة", "صورت بيها خرجة كاملة ديال الدراجة تقريباً 5 ساعات وما طفاتش. الشحن سريع. العدسات كيحميو من الشمس مزيان."],
+  ["خديجة من أكادير", 4, "زوينة، خاص غير تعلم الزر", "أول نهار تلفت شوية مع الزر ديال التصوير ولكن من بعد ساهلة: ضغطة للتصويرة وجوج للفيديو. الجودة ممتازة بالنسبة للثمن."],
+  ["Anas de Tanger", 5, "Parfait pour la moto", "Je filme tous mes trajets maintenant. L'angle POV est exactement ce que je vois. Étanche testée sous la pluie — aucun problème."],
+  ["بلال من فاس", 5, "الدفع عند الاستلام ريحني", "أول مرة نشري من الإنترنت وكنت خايف، ولكن الدفع عند الاستلام ريحني. السلعة هي اللي فالتصاور بالضبط والعلبة عامرة."],
+  ["Sara de Marrakech", 5, "Idéal voyage", "Je l'ai emmenée à Essaouira : photos, vidéos, plage, tout y est. Légères, jolies, et la carte mémoire offerte fait plaisir."],
+  ["حمزة من مكناس", 5, "ممتازة للصيد والخرجات", "كنستعملها فالصيد والخرجات للجبل. ضد الماء بصح، طاحت ليا فالواد مرة وخدامة عادي. كنصح بيها."],
+  ["Rachid de Rabat", 5, "Rapport qualité-prix imbattable", "Caméra discrète, verres polarisés de bonne qualité, batterie sérieuse. Pour 499 DH franchement il n'y a pas mieux."]
+];
+document.getElementById("reviewsGrid").innerHTML = REVIEWS.map(function (r) {
+  return '<figure class="rounded-2xl bg-[#faf8f2] border border-black/[0.06] p-5"><p class="text-[#f97316] tracking-tight">' + "★".repeat(r[1]) + '<span class="text-black/20">' + "★".repeat(5 - r[1]) + '</span></p>'
+    + '<h4 class="mt-1.5 text-sm font-black">' + r[2] + '</h4><blockquote class="mt-1 text-[14px] leading-relaxed text-black/70">' + r[3] + '</blockquote>'
+    + '<figcaption class="mt-3 text-[13px] font-black text-black/60">— ' + r[0] + ' <span class="text-[#15803d]">✓ مشتري مؤكد</span></figcaption></figure>';
+}).join("");
+
+// ===== الأسئلة =====
+var FAQS = [
+  ["كيفاش كنخلص؟", "ساهلة: كتعمّر الاستمارة وكتأكد عبر واتساب، وكتخلص نقداً ملي توصلك السلعة بين يديك. بلا كارت بنكية وبلا تسبيق."],
+  ["شحال كيدير التوصيل؟", "التوصيل مجاني لجميع المدن المغربية، وكيوصل في 24-72 ساعة حسب المدينة. الدار البيضاء والرباط غالباً في 24-48 ساعة."],
+  ["كيفاش كتخدم الكاميرا؟", "ضغطة وحدة على زر الذراع للتصويرة، وضغطة مطوّلة للفيديو. الملفات كيتسجلو على كارت الميموري ومن بعد كتنقلهم للهاتف بالكابل."],
+  ["واش البطارية كافية؟", "البطارية كتدوم حتى 6 ساعات تصوير متواصل، والشحن سريع عبر USB-C. كافية لنهار كامل ديال الخرجات."],
+  ["واش ضد الماء بصح؟", "إيه، مقاومة للماء والعرق والغبار (IPX5): الشتا، العرق، والرشاش عادي. غير ما تغطسهاش كاملة في الماء."],
+  ["واش كاين ضمان؟", "إيه، ضمان سنة كاملة ضد عيوب الصنع + إمكانية الإرجاع خلال 7 أيام إلا ما عجباتكش (بحالتها الأصلية)."]
+];
+var faqList = document.getElementById("faqList");
+faqList.innerHTML = FAQS.map(function (f, i) {
+  return '<div class="rounded-2xl border bg-white faq-item" data-i="' + i + '"><button type="button" class="faq-q w-full flex items-center justify-between gap-3 px-5 py-4 text-right font-bold text-[15px]">' + f[0] + '<span class="faq-chev shrink-0 text-black/40">⌄</span></button><p class="faq-a hidden px-5 pb-5 text-sm leading-relaxed text-black/65">' + f[1] + '</p></div>';
+}).join("");
+faqList.querySelectorAll(".faq-item").forEach(function (item, i) {
+  if (i === 0) openFaq(item);
+  item.querySelector(".faq-q").addEventListener("click", function () {
+    var isOpen = !item.querySelector(".faq-a").classList.contains("hidden");
+    faqList.querySelectorAll(".faq-item").forEach(closeFaq);
+    if (!isOpen) openFaq(item);
+  });
+});
+function openFaq(item) { item.querySelector(".faq-a").classList.remove("hidden"); item.classList.add("border-[#f97316]"); item.querySelector(".faq-chev").textContent = "⌃"; item.querySelector(".faq-chev").classList.add("text-[#f97316]"); }
+function closeFaq(item) { item.querySelector(".faq-a").classList.add("hidden"); item.classList.remove("border-[#f97316]"); item.querySelector(".faq-chev").textContent = "⌄"; item.querySelector(".faq-chev").classList.remove("text-[#f97316]"); }
+
+// ===== العروض + الاستمارة =====
+var offerIdx = 1;
+var offerBtns = document.querySelectorAll(".offer-btn");
+function paintOffers() {
+  offerBtns.forEach(function (b, i) {
+    var on = i === offerIdx, dot = b.querySelector(".dot");
+    b.classList.toggle("border-[#f97316]", on); b.classList.toggle("bg-[#fff7ed]", on); b.classList.toggle("border-black/10", !on);
+    dot.className = "dot grid place-items-center size-6 rounded-full border-2 shrink-0 " + (on ? "border-[#f97316] bg-[#f97316] text-white" : "border-black/25 text-transparent");
+  });
+  document.getElementById("sumPrice").textContent = OFFERS[offerIdx].price;
+  document.getElementById("sumTotal").textContent = OFFERS[offerIdx].price;
+  document.getElementById("submitTotal").textContent = OFFERS[offerIdx].price;
+}
+offerBtns.forEach(function (b) { b.addEventListener("click", function () { offerIdx = parseInt(b.dataset.offer, 10); paintOffers(); }); });
+paintOffers();
+
+document.getElementById("orderForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var name = document.getElementById("fName").value.trim(),
+      phone = document.getElementById("fPhone").value.replace(/[\s-]/g, ""),
+      city = document.getElementById("fCity").value,
+      address = document.getElementById("fAddress").value.trim(),
+      err = document.getElementById("formError");
+  function fail(m) { err.textContent = m; err.classList.remove("hidden"); err.scrollIntoView({ behavior: "smooth", block: "center" }); }
+  if (name.length < 3) return fail("المرجو كتابة الاسم الكامل.");
+  if (!/^0[67]\d{8}$/.test(phone)) return fail("المرجو كتابة رقم هاتف مغربي صحيح (مثال: 0612345678).");
+  if (address.length < 5) return fail("المرجو كتابة العنوان الكامل باش يوصلك الطلب.");
+  err.classList.add("hidden");
+  var o = OFFERS[offerIdx];
+  var msg = "طلب جديد 🕶️ نظارات Lenstrail POV\n------------------------\nالاسم: " + name + "\nالهاتف: " + phone + "\nالمدينة: " + city + "\nالعنوان: " + address + "\nالكمية: " + o.qty + " (" + o.label + ")\nالمجموع عند الاستلام: " + o.price + "\n------------------------\nشكراً!";
+  var url = waLink(msg);
+  document.getElementById("waAgain").href = url;
+  window.open(url, "_blank", "noopener,noreferrer");
+  document.getElementById("orderForm").classList.add("hidden");
+  document.getElementById("orderSuccess").classList.remove("hidden");
+  document.getElementById("orderSuccess").scrollIntoView({ behavior: "smooth", block: "center" });
+});
+document.getElementById("backToForm").addEventListener("click", function () {
+  document.getElementById("orderSuccess").classList.add("hidden");
+  document.getElementById("orderForm").classList.remove("hidden");
+});
+</script>
+</body>
+</html>
